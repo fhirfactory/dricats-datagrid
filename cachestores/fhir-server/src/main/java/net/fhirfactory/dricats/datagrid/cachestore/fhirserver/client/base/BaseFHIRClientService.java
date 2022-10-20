@@ -21,22 +21,6 @@
  */
 package net.fhirfactory.dricats.datagrid.cachestore.fhirserver.client.base;
 
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-
-import javax.annotation.PostConstruct;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.hl7.fhir.r4.model.Bundle;
-import org.hl7.fhir.r4.model.CodeableConcept;
-import org.hl7.fhir.r4.model.Coding;
-import org.hl7.fhir.r4.model.Identifier;
-import org.hl7.fhir.r4.model.Reference;
-import org.hl7.fhir.r4.model.Resource;
-import org.hl7.fhir.r4.model.ResourceType;
-import org.slf4j.Logger;
-
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
 import ca.uhn.fhir.rest.api.MethodOutcome;
@@ -44,8 +28,16 @@ import ca.uhn.fhir.rest.client.api.IGenericClient;
 import ca.uhn.fhir.rest.client.api.ServerValidationModeEnum;
 import ca.uhn.fhir.rest.client.interceptor.AdditionalRequestHeadersInterceptor;
 import net.fhirfactory.dricats.datagrid.cachestore.fhirserver.configuration.FHIRServerCacheStoreConfiguration;
-import net.fhirfactory.dricats.internals.fhir.r4.resources.bundle.BundleContentHelper;
-import net.fhirfactory.dricats.util.FHIRContextUtility;
+import net.fhirfactory.pegacorn.internals.fhir.r4.resources.bundle.BundleContentHelper;
+import net.fhirfactory.pegacorn.util.FHIRContextUtility;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.hl7.fhir.r4.model.*;
+import org.slf4j.Logger;
+
+import javax.annotation.PostConstruct;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public abstract class BaseFHIRClientService {
 
@@ -70,7 +62,7 @@ public abstract class BaseFHIRClientService {
 	//
 
 	public BaseFHIRClientService(FHIRContextUtility fhirContextUtility, BundleContentHelper bundleContentHelper,
-			FHIRServerCacheStoreConfiguration configuration) {
+								 FHIRServerCacheStoreConfiguration configuration) {
 		super();
 		this.fhirContextUtility = fhirContextUtility;
 		this.bundleContentHelper = bundleContentHelper;

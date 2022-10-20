@@ -21,7 +21,7 @@
  */
 package net.fhirfactory.pegacorn.fhirim.workshops.datagrid.cache.common;
 
-import net.fhirfactory.dricats.interfaces.topology.ProcessingPlantInterface;
+import net.fhirfactory.pegacorn.core.interfaces.topology.ProcessingPlantInterface;
 import org.infinispan.configuration.cache.CacheMode;
 import org.infinispan.configuration.cache.Configuration;
 import org.infinispan.configuration.cache.ConfigurationBuilder;

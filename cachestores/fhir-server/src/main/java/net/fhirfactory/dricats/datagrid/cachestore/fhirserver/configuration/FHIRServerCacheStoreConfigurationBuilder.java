@@ -26,7 +26,6 @@ import org.infinispan.commons.configuration.ConfigurationBuilderInfo;
 import org.infinispan.commons.configuration.attributes.AttributeSet;
 import org.infinispan.commons.configuration.elements.ElementDefinition;
 import org.infinispan.configuration.cache.AbstractStoreConfigurationBuilder;
-import org.infinispan.configuration.cache.AsyncStoreConfiguration;
 import org.infinispan.configuration.cache.PersistenceConfigurationBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

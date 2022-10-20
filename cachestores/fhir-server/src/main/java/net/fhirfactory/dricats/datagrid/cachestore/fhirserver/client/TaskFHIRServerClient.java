@@ -22,6 +22,7 @@
 package net.fhirfactory.dricats.datagrid.cachestore.fhirserver.client;
 
 import net.fhirfactory.dricats.datagrid.cachestore.fhirserver.client.base.BaseFHIRClientService;
+import net.fhirfactory.dricats.datagrid.cachestore.fhirserver.configuration.FHIRServerCacheStoreConfiguration;
 import net.fhirfactory.pegacorn.internals.fhir.r4.resources.bundle.BundleContentHelper;
 import net.fhirfactory.pegacorn.util.FHIRContextUtility;
 import org.hl7.fhir.r4.model.ResourceType;
@@ -35,8 +36,8 @@ public class TaskFHIRServerClient extends BaseFHIRClientService {
     // Constructor
     //
 
-    public TaskFHIRServerClient(FHIRContextUtility fhirContextUtility, BundleContentHelper bundleContentHelper){
-        super(fhirContextUtility, bundleContentHelper);
+    public TaskFHIRServerClient(FHIRContextUtility fhirContextUtility, BundleContentHelper bundleContentHelper, FHIRServerCacheStoreConfiguration configuration){
+        super(fhirContextUtility, bundleContentHelper, configuration);
     }
 
     //

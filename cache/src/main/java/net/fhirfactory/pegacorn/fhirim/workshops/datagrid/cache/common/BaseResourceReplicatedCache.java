@@ -21,9 +21,10 @@
  */
 package net.fhirfactory.pegacorn.fhirim.workshops.datagrid.cache.common;
 
-import net.fhirfactory.dricats.model.datagrid.datatypes.DataGridResourceIdType;
-import net.fhirfactory.dricats.model.datagrid.datatypes.DataGridResourceType;
-import net.fhirfactory.dricats.model.datagrid.datatypes.DatagridPersistenceServiceRegistrationType;
+
+import net.fhirfactory.pegacorn.core.model.datagrid.datatypes.DataGridResourceIdType;
+import net.fhirfactory.pegacorn.core.model.datagrid.datatypes.DataGridResourceType;
+import net.fhirfactory.pegacorn.core.model.datagrid.datatypes.DatagridPersistenceServiceRegistrationType;
 import net.fhirfactory.pegacorn.core.model.dataparcel.DataParcelTypeDescriptor;
 import org.infinispan.Cache;
 

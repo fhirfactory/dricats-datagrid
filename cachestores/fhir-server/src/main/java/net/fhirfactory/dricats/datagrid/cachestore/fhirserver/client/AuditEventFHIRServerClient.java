@@ -21,13 +21,13 @@
  */
 package net.fhirfactory.dricats.datagrid.cachestore.fhirserver.client;
 
+import net.fhirfactory.dricats.datagrid.cachestore.fhirserver.client.base.BaseFHIRClientService;
+import net.fhirfactory.dricats.datagrid.cachestore.fhirserver.configuration.FHIRServerCacheStoreConfiguration;
+import net.fhirfactory.pegacorn.internals.fhir.r4.resources.bundle.BundleContentHelper;
+import net.fhirfactory.pegacorn.util.FHIRContextUtility;
 import org.hl7.fhir.r4.model.ResourceType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import net.fhirfactory.dricats.datagrid.cachestore.fhirserver.client.base.BaseFHIRClientService;
-import net.fhirfactory.dricats.internals.fhir.r4.resources.bundle.BundleContentHelper;
-import net.fhirfactory.dricats.util.FHIRContextUtility;
 
 public class AuditEventFHIRServerClient extends BaseFHIRClientService {
 	private static final Logger LOG = LoggerFactory.getLogger(AuditEventFHIRServerClient.class);
@@ -36,8 +36,8 @@ public class AuditEventFHIRServerClient extends BaseFHIRClientService {
 	// Constructor
 	//
 
-	public AuditEventFHIRServerClient(FHIRContextUtility fhirContextUtility, BundleContentHelper bundleContentHelper) {
-		super(fhirContextUtility, bundleContentHelper);
+	public AuditEventFHIRServerClient(FHIRContextUtility fhirContextUtility, BundleContentHelper bundleContentHelper, FHIRServerCacheStoreConfiguration configuration) {
+		super(fhirContextUtility, bundleContentHelper, configuration);
 	}
 
 	//

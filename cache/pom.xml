@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>net.fhirfactory.dricats</groupId>
+        <groupId>net.fhirfactory.pegacorn</groupId>
         <artifactId>dricats-datagrid</artifactId>
         <version>1.6.0-SNAPSHOT</version>
     </parent>
@@ -97,8 +97,16 @@
 
         <!-- Pegacorn Deployment Properties -->
         <dependency>
-            <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-deployment-configuration</artifactId>
+            <groupId>net.fhirfactory.pegacorn</groupId>
+            <artifactId>pegacorn-deployment-constants</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.fhirfactory.pegacorn</groupId>
+            <artifactId>pegacorn-deployment-properties</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -106,8 +114,8 @@
 
         <!-- Pegacorn Common Code -->
         <dependency>
-            <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-commoncode</artifactId>
+            <groupId>net.fhirfactory.pegacorn</groupId>
+            <artifactId>pegacorn-buildingblocks-commoncode</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -115,8 +123,8 @@
 
         <!-- Pegacorn Petasos Topology Services -->
         <dependency>
-            <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-petasos-framework</artifactId>
+            <groupId>net.fhirfactory.pegacorn</groupId>
+            <artifactId>pegacorn-buildingblocks-datamodels-core</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
